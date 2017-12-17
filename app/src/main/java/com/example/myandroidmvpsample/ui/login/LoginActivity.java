@@ -6,11 +6,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.myandroidmvpsample.MvpApp;
 import com.example.myandroidmvpsample.R;
 import com.example.myandroidmvpsample.ui.base.BaseActivity;
 import com.example.myandroidmvpsample.data.DataManager;
+import com.example.myandroidmvpsample.ui.main.MainActivity;
+import com.example.myandroidmvpsample.utils.CommonUtils;
 
 public class LoginActivity extends BaseActivity implements LoginMvpView {
 
@@ -47,11 +50,28 @@ public class LoginActivity extends BaseActivity implements LoginMvpView {
 
     @Override
     public void openMainActivity() {
-
+        Intent intent = getStartIntent(this);
+        startActivity(intent);
+        finish();
     }
 
     @Override
     public void onLoginButtonClick() {
 
+        String emailId = etEmail.getText().toString().trim();
+        String password = etPassword.getText().toString().trim();
+
+        if (CommonUtils.isEmailValid(emailId)) {
+            Toast.makeText(this, "Enter correct Email", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        if (password.isEmpty()) {
+            Toast.makeText(this, "Enter Password", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        loginPresenter.startLogin(emailId);
     }
+
 }
