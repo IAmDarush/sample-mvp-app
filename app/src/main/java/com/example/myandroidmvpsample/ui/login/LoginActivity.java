@@ -1,15 +1,57 @@
 package com.example.myandroidmvpsample.ui.login;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
+import com.example.myandroidmvpsample.MvpApp;
 import com.example.myandroidmvpsample.R;
+import com.example.myandroidmvpsample.ui.base.BaseActivity;
+import com.example.myandroidmvpsample.data.DataManager;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends BaseActivity implements LoginMvpView {
+
+    LoginPresenter loginPresenter;
+    EditText etEmail;
+    EditText etPassword;
+    Button btnLogin;
+
+    public static Intent getStartIntent(Context context) {
+        return new Intent(context, LoginActivity.class);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        DataManager dataManager = ((MvpApp) getApplication()).getDataManager();
+        loginPresenter = new LoginPresenter(dataManager);
+
+        loginPresenter.onAttach(this);
+        etEmail = findViewById(R.id.et_login_email);
+        etPassword = findViewById(R.id.et_login_password);
+        btnLogin = findViewById(R.id.btn_login_login);
+
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onLoginButtonClick();
+            }
+        });
+
+    }
+
+    @Override
+    public void openMainActivity() {
+
+    }
+
+    @Override
+    public void onLoginButtonClick() {
+
     }
 }

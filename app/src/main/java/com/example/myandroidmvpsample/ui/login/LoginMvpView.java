@@ -1,6 +1,6 @@
 package com.example.myandroidmvpsample.ui.login;
 
-import com.example.myandroidmvpsample.base.MvpView;
+import com.example.myandroidmvpsample.ui.base.MvpView;
 
 /**
  * Created by Darush on 12/16/2017.

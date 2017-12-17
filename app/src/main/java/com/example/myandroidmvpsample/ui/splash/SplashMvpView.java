@@ -1,6 +1,6 @@
 package com.example.myandroidmvpsample.ui.splash;
 
-import com.example.myandroidmvpsample.base.MvpView;
+import com.example.myandroidmvpsample.ui.base.MvpView;
 
 /**
  * Created by Darush on 12/12/2017.

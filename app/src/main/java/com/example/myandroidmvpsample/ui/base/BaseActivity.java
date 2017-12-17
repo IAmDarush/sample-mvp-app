@@ -1,4 +1,4 @@
-package com.example.myandroidmvpsample.base;
+package com.example.myandroidmvpsample.ui.base;
 
 import android.support.v7.app.AppCompatActivity;
 

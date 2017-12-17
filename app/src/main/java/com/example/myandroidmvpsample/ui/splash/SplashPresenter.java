@@ -1,6 +1,6 @@
 package com.example.myandroidmvpsample.ui.splash;
 
-import com.example.myandroidmvpsample.base.BasePresenter;
+import com.example.myandroidmvpsample.ui.base.BasePresenter;
 import com.example.myandroidmvpsample.data.DataManager;
 
 /**

@@ -1,4 +1,4 @@
-package com.example.myandroidmvpsample.base;
+package com.example.myandroidmvpsample.ui.base;
 
 import com.example.myandroidmvpsample.data.DataManager;
 
