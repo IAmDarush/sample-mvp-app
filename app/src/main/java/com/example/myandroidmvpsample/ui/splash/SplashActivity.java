@@ -8,6 +8,7 @@ import com.example.myandroidmvpsample.MvpApp;
 import com.example.myandroidmvpsample.R;
 import com.example.myandroidmvpsample.data.DataManager;
 import com.example.myandroidmvpsample.ui.base.BaseActivity;
+import com.example.myandroidmvpsample.ui.login.LoginActivity;
 
 public class SplashActivity extends BaseActivity implements SplashMvpView {
 
@@ -39,7 +40,7 @@ public class SplashActivity extends BaseActivity implements SplashMvpView {
 
     @Override
     public void openLoginActivity() {
-        Intent intent = getStartIntent(this);
+        Intent intent = LoginActivity.getStartIntent(this);
         startActivity(intent);
         finish();
     }
