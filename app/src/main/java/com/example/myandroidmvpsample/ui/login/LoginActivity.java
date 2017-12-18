@@ -61,7 +61,7 @@ public class LoginActivity extends BaseActivity implements LoginMvpView {
         String emailId = etEmail.getText().toString().trim();
         String password = etPassword.getText().toString().trim();
 
-        if (CommonUtils.isEmailValid(emailId)) {
+        if (!CommonUtils.isEmailValid(emailId)) {
             Toast.makeText(this, "Enter correct Email", Toast.LENGTH_SHORT).show();
             return;
         }
