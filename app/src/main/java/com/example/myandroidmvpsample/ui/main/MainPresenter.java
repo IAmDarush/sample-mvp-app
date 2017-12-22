@@ -7,7 +7,7 @@ import com.example.myandroidmvpsample.ui.base.BasePresenter;
  * Created by Darush on 12/18/2017.
  */
 
-public class MainPresenter<V extends MainMvpVIew> extends BasePresenter<V> implements MainMvpPresenter<V> {
+public class MainPresenter<V extends MainMvpView> extends BasePresenter<V> implements MainMvpPresenter<V> {
 
     public MainPresenter(DataManager dataManager) {
         super(dataManager);

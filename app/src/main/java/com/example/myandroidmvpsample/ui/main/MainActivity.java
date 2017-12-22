@@ -2,7 +2,6 @@ package com.example.myandroidmvpsample.ui.main;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,7 +13,7 @@ import com.example.myandroidmvpsample.data.DataManager;
 import com.example.myandroidmvpsample.ui.base.BaseActivity;
 import com.example.myandroidmvpsample.ui.splash.SplashActivity;
 
-public class MainActivity extends BaseActivity implements MainMvpVIew {
+public class MainActivity extends BaseActivity implements MainMvpView {
 
     TextView tvShow;
     Button btnLogout;
