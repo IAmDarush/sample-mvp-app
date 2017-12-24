@@ -6,3 +6,6 @@
 
 
 A sample app based on MVP architecture.
+
+### Credits
+[Mindorks](https://mindorks.com/course/android-mvp-introduction)
