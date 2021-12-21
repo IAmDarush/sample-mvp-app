@@ -1,4 +1,4 @@
-# my-android-mvp-sample
+# sample-mvp-app
 
 A sample app based on MVP architecture.
 
